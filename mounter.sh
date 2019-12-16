@@ -35,7 +35,7 @@ elif [ $choice == "dir" ]
 then
    echo "$(make_dir_ramdisk)" 
 
-elif [ $choice == "mount"]
+elif [ $choice == "mount" ]
 then
   echo "$(mount)"
 
