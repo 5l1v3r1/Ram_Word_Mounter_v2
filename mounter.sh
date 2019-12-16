@@ -29,7 +29,6 @@ mount() { # Function to mount the space the user wants
 # Calling the functions down below
 if [ $choice == "ram" ]
 then
-  echo "[*] You have chose the ram option"
   echo "$(ram_check)"
 
 elif [ $choice == "dir" ]
