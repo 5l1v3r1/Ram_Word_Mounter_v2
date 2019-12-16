@@ -5,6 +5,12 @@
 # mount -t tmpfs -o size=500m tmpfs /mnt/ramdisk
 # echo "$(ram_check)"
 
+# menu
+echo "1.) ram"
+echo "2.) dir"
+echo "3.) mount"
+
+# input below
 read -p "Enter the option you would like: " choice
 
 # Functions need below:
@@ -18,8 +24,7 @@ make_dir_ramdisk() { # Makes the directory
     mkdir /mnt/ramdisk
 }
 
-mount() { # Function to mount the space the user wants
-    echo "[+] time to mount"
+mounter() { # Function to mount the space the user wants
     read -p "Enter how much space you would like to mount ex 500m: " space
     echo "[+] Mounting now..."
     mount -t tmpfs -o size=$space tmpfs /mnt/ramdisk
@@ -37,7 +42,7 @@ then
 
 elif [ $choice == "mount" ]
 then
-  echo "$(mount)"
+  echo "$(mounter)"
 
 else
   echo "[-] Not a valid option"
