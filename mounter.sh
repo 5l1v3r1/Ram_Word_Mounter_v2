@@ -4,6 +4,7 @@
 # mkdir /mnt/ramdisk
 # mount -t tmpfs -o size=500m tmpfs /mnt/ramdisk
 
+# Functions need below:
 ram_check() { # Displays ram
     echo "[+] Displaying ram..."
     free -g
@@ -17,9 +18,9 @@ make_dir_ramdisk() { # Makes the directory
 
 mount() { # Function to mount the space the user wants
     echo "[+] time to mount"
-    read -p "Enter how much space you would like to mount ex 500m: "
+    read -p "Enter how much space you would like to mount ex 500m: " space
     echo "[+] Mounting now..."
-    mount -t tmpfs -o size= tmpfs /mnt/ramdisk
+    mount -t tmpfs -o size=$space tmpfs /mnt/ramdisk
     echo '[+] Done!'
 }
 
