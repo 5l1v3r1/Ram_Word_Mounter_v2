@@ -6,6 +6,7 @@
 # echo "$(ram_check)"
 
 # menu
+echo " MOUNTER V2"
 echo "1.) ram"
 echo "2.) dir"
 echo "3.) mount"
