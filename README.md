@@ -4,7 +4,9 @@
 
 ## Usage
 ```
-git clone
+git clone https://github.com/hackerman234/Ram_Word_Mounter_v2.git
+chmod +x mounter.sh
+./mounter.sh
 ```
 
 
